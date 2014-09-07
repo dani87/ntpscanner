@@ -46,7 +46,6 @@ elif sys.argv[1] == "-m":
      read_url = urllib2.urlopen(get_url).read()
      ip_regex = re.compile("\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
      find_ip = re.findall(ip_regex,read_url)
-     print(find_ip)
      with open(sys.argv[3], "wb") as file:
           for ip in find_ip:
               print("Adding IP: " + ip + " to file: " + sys.argv[3])
